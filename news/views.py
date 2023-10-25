@@ -1,11 +1,12 @@
 from rest_framework.views import APIView
+from rest_framework.pagination import PageNumberPagination
 from rest_framework.response import Response
 from rest_framework import status
 from news.models import News
 from news.serializers import NewsSerializer
 
 
-class NewsAPIView(APIView):
+class NewsAPIView(APIView, PageNumberPagination):
     permission_classes = []
     authentication_classes = []
 
@@ -13,11 +14,17 @@ class NewsAPIView(APIView):
         if pk:
             news = News.objects.get(pk=pk)
             serializer = NewsSerializer(news, many=False)
+            return Response(serializer.data)
         else:
             news = News.objects.all()
-            serializer = NewsSerializer(news, many=True)
-            
-        return Response(serializer.data)
+
+            # logica da paginação -> retorna um page obj
+            news_paginate = self.paginate_queryset(news, request)
+
+            serializer = NewsSerializer(news_paginate, many=True)
+
+            # retorno deve ser exclusivo para retornar os parâmetros count, next, previous e results.
+            return self.get_paginated_response(serializer.data)
 
     def post(self, request) -> Response:
         serializer = NewsSerializer(data=request.data)
