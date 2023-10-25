@@ -48,10 +48,12 @@ class NewsAPIViewTestCase(APITestCase):
         self.assertEqual(response.data, expected_data)
 
     def test_create_news(self):
+        # obj news faltando o atributo 'category'
         new_news_data = {
             'title': 'New Test News Article',
             'content': 'This is a new test news article.',
             'author': 'Jane Smith',
+            'category': 'politics'
         }
         response = self.client.post(self.url, new_news_data, format='json')
   
