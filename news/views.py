@@ -56,7 +56,7 @@ class NewsAPIView(APIView, PageNumberPagination):
         return Response(status=status.HTTP_204_NO_CONTENT)
 
 
-class LinkNewsAPIView(APIView, PageNumberPagination):
+class LinkNewsAPIView(APIView):
     permission_classes = []
     authentication_classes = []
 
@@ -65,12 +65,12 @@ class LinkNewsAPIView(APIView, PageNumberPagination):
             try:
                 link_news_exclusive = LinkNewsExclusive.objects.get(code_link=code_link)
                 if link_news_exclusive.expirate:
-                    return Response(status=status.HTTP_404_NOT_FOUND)
+                    return Response({'detail': 'Link expirado'}, status=status.HTTP_400_BAD_REQUEST)
                 else:
                     serializer = NewsSerializer(link_news_exclusive.news, many=False)
                     return Response(serializer.data)
             except LinkNewsExclusive.DoesNotExist:
-                return Response(status=status.HTTP_404_NOT_FOUND)
+                return Response({'detail': 'Link inexistente'}, status=status.HTTP_404_NOT_FOUND)
         else:
             return Response(status=status.HTTP_400_BAD_REQUEST)
 
@@ -85,5 +85,5 @@ class LinkNewsAPIView(APIView, PageNumberPagination):
             serializer = LinkNewsExclusiveSerializer(link_exlusive)
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         except News.DoesNotExist:
-            return Response(status=status.HTTP_404_NOT_FOUND)
+            return Response({'detail': 'Notícia não encontrada'}, status=status.HTTP_404_NOT_FOUND)
 
