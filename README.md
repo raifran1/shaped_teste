@@ -51,3 +51,21 @@ Com o ambiente virtual ativo, e com pacotes instalados agora é só rodar o serv
 ```bash
 python manage.py test
 ```
+
+## Sobre as atualizações (Resumo)
+
+### Paginação da lista de noticias
+
+Foi configurado a paginação padrão do Django Rest Framework, baseado no parâmetro 'page' para navegar entre as páginas.
+Por padrão no settings configuramos 100 resultados para a primeira página
+
+### Nova api para gerar um link temporário para acessar dados de alguma matéria
+
+Existem dois endpoints que são descritos abaixo:
+
+#### POST
+ `/api/link/` - Recebe um JSON no formato `{ "news_pk": <id> }` onde `<id>` vai ser o id da matéria a ser gerado o link
+
+#### GET
+`/api/link/<code_link>/` - Esse método recebe um código em sua url em que caso esteja válido e existente irá retornar o obj de uma notícia
+
