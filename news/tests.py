@@ -18,7 +18,7 @@ class NewsAPIViewTestCase(APITestCase):
         response = self.client.get(self.url)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         expected_data = NewsSerializer(News.objects.all(), many=True).data
-        self.assertEqual(response.data, expected_data)
+        self.assertEqual(response.data['results'], expected_data)
     
     def test_retrive_one_news(self):
         url = reverse('news-api-detail', args=[self.news.id])
