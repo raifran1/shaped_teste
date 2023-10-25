@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d6fa23ca-3dde-420e-8f48-c6f998cee9d9" name="Changes" comment="" />
+    <list default="true" id="d6fa23ca-3dde-420e-8f48-c6f998cee9d9" name="Changes" comment="feat: adicionando opção de link temporário para retornar dados das materias">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/news/views.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,7 +46,107 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Django tests.Test: news.tests.NewsAPIViewTestCase.test_get_all_news">
+    <configuration name="Test: news.tests.NewsAPIViewTestCase.test_create_news" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="sharped_teste" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="news.tests.NewsAPIViewTestCase.test_create_news" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test: news.tests.NewsAPIViewTestCase.test_delete_one_news" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="sharped_teste" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="news.tests.NewsAPIViewTestCase.test_delete_one_news" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test: news.tests.NewsAPIViewTestCase.test_get_all_news" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="sharped_teste" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="news.tests.NewsAPIViewTestCase.test_get_all_news" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test: news.tests.NewsAPIViewTestCase.test_retrive_one_news" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="sharped_teste" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="news.tests.NewsAPIViewTestCase.test_retrive_one_news" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test: news.tests.NewsAPIViewTestCase.test_update_one_news" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="sharped_teste" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="news.tests.NewsAPIViewTestCase.test_update_one_news" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -90,6 +193,15 @@
       <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Django tests.Test: news.tests.NewsAPIViewTestCase.test_get_all_news" />
+        <item itemvalue="Django tests.Test: news.tests.NewsAPIViewTestCase.test_retrive_one_news" />
+        <item itemvalue="Django tests.Test: news.tests.NewsAPIViewTestCase.test_delete_one_news" />
+        <item itemvalue="Django tests.Test: news.tests.NewsAPIViewTestCase.test_update_one_news" />
+        <item itemvalue="Django tests.Test: news.tests.NewsAPIViewTestCase.test_create_news" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -100,11 +212,76 @@
       <option name="presentableId" value="Default" />
       <updated>1698257136843</updated>
       <workItem from="1698257140711" duration="232000" />
-      <workItem from="1698257385990" duration="1134000" />
+      <workItem from="1698257385990" duration="4817000" />
     </task>
+    <task id="LOCAL-00001" summary="feat: adicionando campo created_at e updated_at em news">
+      <option name="closed" value="true" />
+      <created>1698258919465</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1698258919465</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat: adicionando configuração para paginação nativa do Rest Framework">
+      <option name="closed" value="true" />
+      <created>1698259068359</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1698259068359</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat: adicionando paginação na view">
+      <option name="closed" value="true" />
+      <created>1698259609221</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1698259609221</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat: correção do teste que retornava 400">
+      <option name="closed" value="true" />
+      <created>1698259821130</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1698259821130</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feat: correção do teste de todas as noticias (paginação)">
+      <option name="closed" value="true" />
+      <created>1698261946816</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1698261946816</updated>
+    </task>
+    <task id="LOCAL-00006" summary="feat: adicionando opção de link temporário para retornar dados das materias">
+      <option name="closed" value="true" />
+      <created>1698262018692</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1698262018692</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: adicionando campo created_at e updated_at em news" />
+    <MESSAGE value="feat: adicionando configuração para paginação nativa do Rest Framework" />
+    <MESSAGE value="feat: adicionando paginação na view" />
+    <MESSAGE value="feat: correção do teste que retornava 400" />
+    <MESSAGE value="feat: correção do teste de todas as noticias (paginação)" />
+    <MESSAGE value="feat: adicionando opção de link temporário para retornar dados das materias" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: adicionando opção de link temporário para retornar dados das materias" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/sharped_teste$Test__news_tests_NewsAPIViewTestCase_test_create_news.coverage" NAME="Test: news.tests.NewsAPIViewTestCase.test_create_news Coverage Results" MODIFIED="1698261613764" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/sharped_teste$Test__news_tests_NewsAPIViewTestCase_test_update_one_news.coverage" NAME="Test: news.tests.NewsAPIViewTestCase.test_update_one_news Coverage Results" MODIFIED="1698261619572" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/sharped_teste$Test__news_tests_NewsAPIViewTestCase_test_get_all_news.coverage" NAME="Test: news.tests.NewsAPIViewTestCase.test_get_all_news Coverage Results" MODIFIED="1698261910503" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/sharped_teste$Test__news_tests_NewsAPIViewTestCase_test_retrive_one_news.coverage" NAME="Test: news.tests.NewsAPIViewTestCase.test_retrive_one_news Coverage Results" MODIFIED="1698261625467" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/sharped_teste$Test__news_tests_NewsAPIViewTestCase_test_delete_one_news.coverage" NAME="Test: news.tests.NewsAPIViewTestCase.test_delete_one_news Coverage Results" MODIFIED="1698261622379" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>
