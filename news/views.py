@@ -2,8 +2,9 @@ from rest_framework.views import APIView
 from rest_framework.pagination import PageNumberPagination
 from rest_framework.response import Response
 from rest_framework import status
-from news.models import News
-from news.serializers import NewsSerializer
+from news.models import News, LinkNewsExclusive
+from news.serializers import NewsSerializer, LinkNewsExclusiveSerializer
+from news.utils import get_code
 
 
 class NewsAPIView(APIView, PageNumberPagination):
@@ -53,3 +54,36 @@ class NewsAPIView(APIView, PageNumberPagination):
 
         news_article.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+
+
+class LinkNewsAPIView(APIView, PageNumberPagination):
+    permission_classes = []
+    authentication_classes = []
+
+    def get(self, request, code_link=None) -> Response:
+        if code_link:
+            try:
+                link_news_exclusive = LinkNewsExclusive.objects.get(code_link=code_link)
+                if link_news_exclusive.expirate:
+                    return Response(status=status.HTTP_404_NOT_FOUND)
+                else:
+                    serializer = NewsSerializer(link_news_exclusive.news, many=False)
+                    return Response(serializer.data)
+            except LinkNewsExclusive.DoesNotExist:
+                return Response(status=status.HTTP_404_NOT_FOUND)
+        else:
+            return Response(status=status.HTTP_400_BAD_REQUEST)
+
+    def post(self, request) -> Response:
+        try:
+            news = News.objects.get(pk=request.data.get('news_pk'))
+            code_link = get_code(25)
+            link_exlusive = LinkNewsExclusive.objects.create(
+                news=news,
+                code_link=code_link
+            )
+            serializer = LinkNewsExclusiveSerializer(link_exlusive)
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        except News.DoesNotExist:
+            return Response(status=status.HTTP_404_NOT_FOUND)
+
